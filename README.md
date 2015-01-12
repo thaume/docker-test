@@ -22,7 +22,12 @@ docker run -d --name="myredis" -p 6379:6379 dockerfile/redis
 
 ### Run the container
 ```
-docker run -i -t --rm -p 3000:3000 -v `pwd`:/src --name="myapp" --link myredis:myredis -e REDIS_HOST="myredis" thaume/docker-test:0.2
+docker run -i -t --rm                     \
+            -p 3000:3000                  \
+            -v `pwd`:/src --name="myapp"  \
+            --link myredis:myredis        \
+            -e REDIS_HOST="myredis"       \
+            thaume/docker-test:0.2
 ```
 
 ### Install dependencies & nodemon & start the server
