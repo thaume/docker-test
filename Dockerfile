@@ -1,4 +1,4 @@
-FROM dockerfile/nodejs
+FROM node:0.10-onbuild
 
 MAINTAINER Tom Coquereau <tom.coquereau@gmail.com>
 
